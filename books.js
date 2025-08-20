@@ -38,6 +38,37 @@ const books = [
     desc: "An introduction to Artificial Intelligence concepts in simple terms.",
     img: "images/book1.jpg"
   },
+ {
+    title: "AI for Beginners",
+    author: "Dr. Sasikala",
+    desc: "An introduction to Artificial Intelligence concepts in simple terms.",
+    img: "images/book1.jpg"
+  },
+ {
+    title: "AI for Beginners",
+    author: "Dr. Sasikala",
+    desc: "An introduction to Artificial Intelligence concepts in simple terms.",
+    img: "images/book1.jpg"
+  },
+ {
+    title: "AI for Beginners",
+    author: "Dr. Sasikala",
+    desc: "An introduction to Artificial Intelligence concepts in simple terms.",
+    img: "images/book1.jpg"
+  },
+ {
+    title: "AI for Beginners",
+    author: "Dr. Sasikala",
+    desc: "An introduction to Artificial Intelligence concepts in simple terms.",
+    img: "images/book1.jpg"
+  },
+ {
+    title: "AI for Beginners",
+    author: "Dr. Sasikala",
+    desc: "An introduction to Artificial Intelligence concepts in simple terms.",
+    img: "images/book1.jpg"
+  },
+
   {
     title: "Drones in Agriculture",
     author: "Dr. Sasikala",
