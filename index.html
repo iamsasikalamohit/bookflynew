@@ -3,151 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bookfly Publications - Coimbatore</title>
+  <title>BookFly Publications</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="container">
-      <h1>📚 Bookfly Publications</h1>
-      <p>Coimbatore</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#books">Books</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <h1>BookFly Publications</h1>
+    <p>Transforming Your Manuscript into a Published Masterpiece</p>
+    <p>📍 Coimbatore | Since 2022 | MSME Registered</p>
   </header>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container">
+  <main>
+    <!-- About Us -->
+    <section id="about">
       <h2>About Us</h2>
       <p>
-        Bookfly Publications, Coimbatore, is dedicated to publishing impactful books 
-        that inspire readers across various fields. With over 12 books published, 
-        our mission is to make knowledge accessible and engaging for everyone.
+        BookFly Publications is a Coimbatore-based publishing house founded in 2022 and proudly registered under MSME. 
+        We are committed to supporting authors, researchers, academicians, and creative writers in bringing their ideas 
+        to life through fast, affordable, and reliable publishing solutions.
       </p>
-    </div>
-  </section>
+      <p>
+        Our mission is to make publishing accessible, transparent, and hassle-free—whether it’s your first book or your next bestseller.
+      </p>
+    </section>
 
-  <!-- Books -->
-  <section id="books" class="books">
-    <div class="container">
+    <!-- Services -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div id="service-list" class="card-grid"></div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose">
+      <h2>Why Choose BookFly?</h2>
+      <ul>
+        <li>✅ MSME Registered & Trusted since 2022</li>
+        <li>✅ Affordable Packages for Students, Researchers & Authors</li>
+        <li>✅ Fast Publication & Professional Quality</li>
+        <li>✅ ISBN, Copyright & Design Support in One Place</li>
+        <li>✅ 100% Author Ownership Rights</li>
+      </ul>
+    </section>
+
+    <!-- Who We Serve -->
+    <section id="who-we-serve">
+      <h2>Who We Serve</h2>
+      <ul>
+        <li>Independent Authors & Writers</li>
+        <li>Academicians & Research Scholars</li>
+        <li>Colleges & Universities (for conference proceedings)</li>
+        <li>Professionals & Entrepreneurs writing books</li>
+      </ul>
+    </section>
+
+    <!-- Books -->
+    <section id="books">
       <h2>Our Books</h2>
-
-      <!-- Search Bar -->
       <input type="text" id="searchBar" placeholder="Search by title or author...">
+      <div id="bookGrid" class="book-grid"></div>
+    </section>
 
-      <!-- Book Grid -->
-      <div class="book-grid" id="bookGrid">
-        <!-- Book 1 -->
-        <div class="book-card">
-          <img src="images/book1.jpg" alt="Book 1">
-          <h3 class="book-title">AI for Beginners</h3>
-          <p class="book-author">Dr. Sasikala</p>
-          <p class="book-desc">An introduction to Artificial Intelligence concepts in simple terms.</p>
-        </div>
-
-        <!-- Book 2 -->
-        <div class="book-card">
-          <img src="images/book2.jpg" alt="Book 2">
-          <h3 class="book-title">Drones in Agriculture</h3>
-          <p class="book-author">Dr. Sasikala</p>
-          <p class="book-desc">Exploring drone technology for precision farming and sustainability.</p>
-        </div>
-
-        <!-- Add more books (3–12) in same format -->
-        <div class="book-card">
-          <img src="images/book3.jpg" alt="Book 3">
-          <h3 class="book-title">Machine Learning Made Easy</h3>
-          <p class="book-author">Author Name</p>
-          <p class="book-desc">Simplified approach to understanding ML concepts and applications.</p>
-        </div>
-
-        <div class="book-card">
-          <img src="images/book4.jpg" alt="Book 4">
-          <h3 class="book-title">Sustainable AI Practices</h3>
-          <p class="book-author">Author Name</p>
-          <p class="book-desc">Using AI responsibly for environment and society.</p>
-        </div>
-<div class="book-card">
-          <img src="images/book3.jpg" alt="Book 3">
-          <h3 class="book-title">Machine Learning Made Easy</h3>
-          <p class="book-author">Author Name</p>
-          <p class="book-desc">Simplified approach to understanding ML concepts and applications.</p>
-        </div>
-
-        <div class="book-card">
-          <img src="images/book4.jpg" alt="Book 4">
-          <h3 class="book-title">Sustainable AI Practices</h3>
-          <p class="book-author">Author Name</p>
-          <p class="book-desc">Using AI responsibly for environment and society.</p>
-        </div>
-<div class="book-card">
-          <img src="images/book3.jpg" alt="Book 3">
-          <h3 class="book-title">Machine Learning Made Easy</h3>
-          <p class="book-author">Author Name</p>
-          <p class="book-desc">Simplified approach to understanding ML concepts and applications.</p>
-        </div>
-
-        <div class="book-card">
-          <img src="images/book4.jpg" alt="Book 4">
-          <h3 class="book-title">Sustainable AI Practices</h3>
-          <p class="book-author">Author Name</p>
-          <p class="book-desc">Using AI responsibly for environment and society.</p>
-        </div>
-
-        <!-- Repeat till Book 12 -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
+    <!-- Contact -->
+    <section id="contact">
       <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/xqalvlen" method="POST" class="contact-form">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+      <p>📍 BookFly Publications<br>Coimbatore, Tamil Nadu, India</p>
+      <p>✉️ Email: <a href="mailto:your@email.com">your@email.com</a></p>
+      <p>📞 Phone/WhatsApp: <a href="tel:+919000000000">+91 90000 00000</a></p>
+      <p>🌐 Website: <a href="http://www.bookflypublications.com" target="_blank">www.bookflypublications.com</a></p>
+    </section>
+  </main>
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Bookfly Publications, Coimbatore. All rights reserved.</p>
-    </div>
+    <p>👉 "At BookFly Publications, we believe every writer deserves to be read."</p>
   </footer>
 
-  <!-- Search Script -->
-  <script>
-    const searchBar = document.getElementById("searchBar");
-    const bookGrid = document.getElementById("bookGrid");
-    const books = bookGrid.getElementsByClassName("book-card");
-
-    searchBar.addEventListener("keyup", function() {
-      const query = searchBar.value.toLowerCase();
-      for (let i = 0; i < books.length; i++) {
-        const title = books[i].querySelector(".book-title").textContent.toLowerCase();
-        const author = books[i].querySelector(".book-author").textContent.toLowerCase();
-        if (title.includes(query) || author.includes(query)) {
-          books[i].style.display = "block";
-        } else {
-          books[i].style.display = "none";
-        }
-      }
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="books.js"></script>
 </body>
 </html>
