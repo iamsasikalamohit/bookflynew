@@ -1,105 +1,99 @@
+// --- Services Data ---
+const services = [
+  {
+    title: "📚 E-Book Publishing Package",
+    description: `
+      End-to-end eBook formatting and designing<br>
+      ISBN allocation (optional)<br>
+      Publishing on leading eBook platforms<br>
+      Lifetime availability with global reach
+    `
+  },
+  {
+    title: "📖 Printed Book Publishing Package",
+    description: `
+      Professional book formatting & interior layout<br>
+      Cover page design (customized for your book)<br>
+      ISBN & barcode support<br>
+      Print-on-demand and bulk printing options<br>
+      Quick turnaround with fast publication support
+    `
+  },
+  {
+    title: "📝 Copyright & Legal Services",
+    description: `
+      Assistance with Indian Copyright Registration<br>
+      Guidance on protecting your intellectual property<br>
+      End-to-end handling of copyright application<br>
+      Legal compliance for hassle-free publishing
+    `
+  }
+];
+
+// --- Books Data ---
 const books = [
   {
     title: "AI for Beginners",
     author: "Dr. Sasikala",
-    description: "An introduction to Artificial Intelligence concepts in simple terms.",
-    image: "images/book1.jpg"
+    desc: "An introduction to Artificial Intelligence concepts in simple terms.",
+    img: "images/book1.jpg"
   },
   {
     title: "Drones in Agriculture",
     author: "Dr. Sasikala",
-    description: "Exploring drone technology for precision farming and sustainability.",
-    image: "images/book2.jpg"
+    desc: "Exploring drone technology for precision farming and sustainability.",
+    img: "images/book2.jpg"
   },
   {
     title: "Machine Learning Made Easy",
     author: "Author Name",
-    description: "Simplified approach to understanding ML concepts and applications.",
-    image: "images/book3.jpg"
+    desc: "Simplified approach to understanding ML concepts and applications.",
+    img: "images/book3.jpg"
   },
   {
     title: "Sustainable AI Practices",
     author: "Author Name",
-    description: "Using AI responsibly for environment and society.",
-    image: "images/book4.jpg"
-  },
-  {
-    title: "Deep Learning Basics",
-    author: "Author Name",
-    description: "A step-by-step guide to deep learning fundamentals.",
-    image: "images/book5.jpg"
-  },
-  {
-    title: "Python for Data Science",
-    author: "Author Name",
-    description: "Learn Python programming with applications in data science.",
-    image: "images/book6.jpg"
-  },
-  {
-    title: "Neural Networks Explained",
-    author: "Author Name",
-    description: "Understanding the architecture and working of neural networks.",
-    image: "images/book7.jpg"
-  },
-  {
-    title: "AI in Healthcare",
-    author: "Author Name",
-    description: "Applications of artificial intelligence in the healthcare industry.",
-    image: "images/book8.jpg"
-  },
-  {
-    title: "Cloud Computing for Beginners",
-    author: "Author Name",
-    description: "Basics of cloud computing and its applications.",
-    image: "images/book9.jpg"
-  },
-  {
-    title: "Big Data Analytics",
-    author: "Author Name",
-    description: "Techniques and tools for handling and analyzing big data.",
-    image: "images/book10.jpg"
-  },
-  {
-    title: "Natural Language Processing",
-    author: "Author Name",
-    description: "Introduction to NLP concepts and real-world applications.",
-    image: "images/book11.jpg"
-  },
-  {
-    title: "Robotics and Automation",
-    author: "Author Name",
-    description: "Understanding robotics and its impact on modern industries.",
-    image: "images/book12.jpg"
+    desc: "Using AI responsibly for environment and society.",
+    img: "images/book4.jpg"
   }
 ];
 
-function displayBooks(filteredBooks = books) {
-  const bookList = document.getElementById("book-list");
-  bookList.innerHTML = "";
-
-  filteredBooks.forEach(book => {
-    const bookCard = document.createElement("div");
-    bookCard.classList.add("book-card");
-
-    bookCard.innerHTML = `
-      <img src="${book.image}" alt="${book.title}">
-      <h3>${book.title}</h3>
-      <p><strong>${book.author}</strong></p>
-      <p>${book.description}</p>
-    `;
-
-    bookList.appendChild(bookCard);
-  });
-}
-
-document.getElementById("search").addEventListener("input", function () {
-  const query = this.value.toLowerCase();
-  const filteredBooks = books.filter(book =>
-    book.title.toLowerCase().includes(query) ||
-    book.author.toLowerCase().includes(query)
-  );
-  displayBooks(filteredBooks);
+// --- Load Services ---
+const serviceList = document.getElementById("service-list");
+services.forEach(service => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `<h3>${service.title}</h3><p>${service.description}</p>`;
+  serviceList.appendChild(card);
 });
 
-// Initial display
-displayBooks();
+// --- Load Books ---
+const bookGrid = document.getElementById("bookGrid");
+books.forEach(book => {
+  const card = document.createElement("div");
+  card.className = "book-card";
+  card.innerHTML = `
+    <img src="${book.img}" alt="${book.title}" />
+    <h3 class="book-title">${book.title}</h3>
+    <p class="book-author">By ${book.author}</p>
+    <p class="book-desc">${book.desc}</p>
+  `;
+  bookGrid.appendChild(card);
+});
+
+// --- Search Functionality ---
+const searchBar = document.getElementById("searchBar");
+searchBar.addEventListener("keyup", function () {
+  const query = searchBar.value.toLowerCase();
+  const cards = document.querySelectorAll(".book-card");
+
+  cards.forEach(card => {
+    const title = card.querySelector(".book-title").textContent.toLowerCase();
+    const author = card.querySelector(".book-author").textContent.toLowerCase();
+    if (title.includes(query) || author.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
